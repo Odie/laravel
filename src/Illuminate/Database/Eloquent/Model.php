@@ -3046,6 +3046,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
 	public static function setEventDispatcher(Dispatcher $dispatcher)
 	{
 		static::$dispatcher = $dispatcher;
+		static::$booted = array();
 	}
 
 	/**
